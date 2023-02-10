@@ -194,11 +194,16 @@ lleva el usuario, aun cuando refreque la página -->
 }
 setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 </script><!-- Está función es para preguntar si ya han pasado el tiempo limite del formulario -->
-
-	
+<header class="navbar sticky-top flex-md-nowrap p-1 text-white m" style="background-color: #002b49">
+    <a class="navbar-brand p-2">
+        <img src="../img/logo.svg" height="60rem"></a>
+    <div class="navbar-nav">
+    </div>
+  </header>
+	<hr>
 	<div style="text-align: center;">
-	<div style="background-color: #111F2D;">
-		<h1 style="color: white;">Evaluación del Código Ético de la Administración Pública Federal y Derechos Humanos</h1>
+	<div style="background-color: #111F2D; border-radius: 20px;">
+		<h1 style="color: white; ">Evaluación del Código Ético de la Administración Pública Federal y Derechos Humanos</h1>
 		</div>
 		<hr><br>
 		<div style="width: 60%;">

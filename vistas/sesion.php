@@ -112,6 +112,11 @@ button{
 font-size:16px;
 }
 }
+
+body{
+	position: relative;
+	padding-bottom: 5em;
+}
 </style>
 <body>
 <header class="navbar sticky-top flex-md-nowrap p-1 text-white m" style="background-color: #002b49">
@@ -121,11 +126,11 @@ font-size:16px;
     </div>
   </header>
   <hr>
-	<div style="width: 50%; text-align: center; height: auto;">
-			<h1 style="color: white; background-color: #111F2D; height: 100%;">Registro de usuario a la Evaluación de Ética del<br> Aeropuerto Internacional Felipe Ángeles</h1>
+	<div style="width: 50%; text-align: center; height: auto; ">
+			<h1 style="color: white; background-color: #111F2D; height: 100%; border-radius: 20px;">Registro de usuario a la Evaluación de Ética del<br> Aeropuerto Internacional Felipe Ángeles</h1>
 		</div>
 	<div style="text-align: center;justify-content: center;">		
-	<br><br><br>
+	<br><br>
 		<div style="border: 1px solid #aaaaaa; background-image: url('../img/form.png'); width: 60%; height: 70%;">
 				<form method="post" action="alta_usuario.php">
 					<br>
@@ -150,7 +155,7 @@ font-size:16px;
 		</div>
 	</div>
 </body>
-<p></p>
+
 <footer>
 	<p id="pie">Copyright © 2023 Aeropuerto Internacional Felipe Ángeles. </p>
 </footer>

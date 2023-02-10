@@ -57,7 +57,7 @@
       transition: all 0.3s ease; }
       .formulario .radio label:hover,
       .formulario .checkbox label:hover {
-        background: rgba(255, 0, 0, 0.541); }
+        background: rgba(0, 26, 255, 0.541); }
       .formulario .radio label:before,
       .formulario .checkbox label:before {
         content: "";
