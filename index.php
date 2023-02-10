@@ -36,10 +36,7 @@ session_start();
 	margin:0px auto;
 	border-radius: 40px;
 	border: 0;
-	position: absolute;
-        top: 30%;
-        left: 27%;
-        margin: -25px 0 0 -25px;
+	
   }
 
   @media (min-width: 600px) {
@@ -78,7 +75,7 @@ session_start();
 	<div style="text-align: center;">
 		<h1 style="color: #111F2D;">INICIO DE SESIÓN</h1>
 		<hr>
-		<div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/avion.png');">
+		<div style="height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/avion.png');">
 				<form method="post" action="modelo/entrar.php"><br>
                     <p><b>Correo Electrónico:</b></p>
 					<input type="email" name="ingresoUsuario" placeholder="Email" required><br><br>
@@ -88,8 +85,12 @@ session_start();
 					<p></p>
 			</form>
 			<br>
-				<a href="#" class="btn btn-outline-dark">Olvide contraseña</a>
+				</div>
+				<hr>
+		<div>
+			<a href="#" class="btn btn-outline-dark">Olvide contraseña</a>
 				<a href="vistas/sesion.php" class="btn btn-outline-dark">No tengo cuenta</a>
+		
 		</div>
 	</div><!-- poner footer -->	
 </body>
