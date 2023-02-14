@@ -213,7 +213,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 				<p style="color: black;">Lea detenidamente las preguntas y eliga la respuesta correcta (valor por cada pregunta 5 puntos).</b></p>
 				<hr>
 				</div>
-		<div style="text-align: left" class="wrap">
+		<div style="text-align: left;" class="wrap">
 		<div></div>
 		<section>
 			<p>

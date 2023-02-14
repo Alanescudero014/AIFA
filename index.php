@@ -88,7 +88,7 @@ session_start();
 					<input type="email" name="ingresoUsuario" placeholder="Email" required><br><br>
 					<p><b>Contraseña:</b></p>
 					<input type="password" name="ingresoContrasena" placeholder="Password" required><br><br>
-					<input type="submit" class="btn btn-light" value="Acceder">
+					<input type="submit" class="btn btn-light" value="Acceder" style="opacity: 85%;">
 					<p></p>
 			</form>
 			<br>
