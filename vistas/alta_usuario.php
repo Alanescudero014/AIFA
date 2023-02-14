@@ -65,5 +65,8 @@ mail($para, $titulo, $mensaje);
         echo "<script>alert('ERROR, vuelve a intentarlo.');</script>";
         header("refresh:1;url=../index.php");
     */}
+    }else{
+        echo "<script>alert('Error, vuelve a intentarlo')</script>;";
+        header("refresh:1;url=../index.php");
     }
 }
