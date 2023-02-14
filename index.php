@@ -39,6 +39,13 @@ session_start();
 	
   }
 
+  #contenedorPadre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
   @media (min-width: 600px) {
     main {
       flex-wrap: nowrap;
@@ -72,7 +79,7 @@ session_start();
     <div class="navbar-nav">
     </div>
   </header>
-	<div style="text-align: center;">
+	<div id="contenedorPadre" style="text-align: center;">
 		<h1 style="color: #111F2D;">INICIO DE SESIÓN</h1>
 		<hr>
 		<div style="height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/avion.png');">

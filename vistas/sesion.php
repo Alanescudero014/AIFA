@@ -115,7 +115,7 @@ font-size:16px;
 
 body{
 	position: relative;
-	padding-bottom: 5em;
+	padding-bottom: 8em;
 }
 </style>
 <body>
@@ -149,7 +149,7 @@ body{
 					<p><b>Correo Electrónico:</b></p>
 					<input type="email" name="correo" required><br><br>
 					<input type="hidden" name="estatus" value="0">
-					<button type="submit" class="btn btn-outline-light"><label>REGISTRAR</label></button>
+					<button type="submit" class="btn btn-outline-primary"><label>REGISTRAR</label></button>
 					<p></p>
 			</form>
 		</div>
