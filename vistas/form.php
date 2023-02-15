@@ -11,6 +11,10 @@ if(!isset($_SESSION['usuario'])){
     die();
 }
 
+if($_SESSION['time'] == null){
+	$_SESSION['time'] = 0;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -164,10 +168,21 @@ setTimeout(mensaje,540000);//540000 (9 minutos)
 
 <script>//SCRIPT 1
     var contador = 0;
-    if (localStorage.tiempo == null){
+
+	
+
+
+	// replace() usando una expresión Regex para reemplazar espacios en blanco
+
+
+	//console.log($variable);
+	//id = localStorage.$variable;
+
+    if (localStorage.usuario<?php echo $_SESSION['usuario'] ?> == null){
         var acumulado = 0;
     }else{
-        var acumulado = Number(localStorage.tiempo);//Aquí se guarda el tiempo
+        var acumulado = Number(localStorage.usuario<?php echo $_SESSION['usuario'] ?>);//Aquí se guarda el tiempo
+		var acu2 = <?php echo intval($_SESSION['time']) ?>;
     }
     
     function contadores(){
@@ -175,7 +190,7 @@ setTimeout(mensaje,540000);//540000 (9 minutos)
 	contador++;
     console.log(contador);
     acumulado = acumulado + 1;
-    localStorage.tiempo = acumulado; 
+    localStorage.usuario<?php echo $_SESSION['usuario'] ?> = acumulado; 
 }
 
 setInterval('contadores()',1000);//1000 CADA SEGUNDO SE EJECUTA LA FUNCIÓN
@@ -191,7 +206,7 @@ lleva el usuario, aun cuando refresque la página -->
 
     if(acumulado >= 599){// 15 -> tiempo de formulario en segundos (599 s / 10 minutos)
 		ahora();
-		delete localStorage.tiempo;
+		delete localStorage.$variable;
     }else{
         //console.log('ok');
     }
@@ -214,7 +229,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 				<b><p style="color: black;">El examen se conforma de una sección de opción múltiple con 20 preguntas, constituyendo el 100% de calificación,
 						cuenta con 10 minutos para contestarlo; deberá elegir la respuesta correcta. Tiene prohibido consultar apuntes, libros o cualquier
 					otro artículo o material no específicado para la resolución de su examen.</p>
-				<p style="color: black;">Lea detenidamente las preguntas y eliga la respuesta correcta (valor por cada pregunta 5 puntos).</b></p>
+				<p style="color: black;">Lea detenidamente las preguntas y eliga la respuesta correcta (valor por cada pregunta 5 puntos).<?php echo $_SESSION['usuario'] ?></b></p>
 				<hr>
 				</div>
 		<div style="text-align: left;" class="wrap">

@@ -19,12 +19,14 @@ $correo = $_POST['ingresoUsuario'];
 
 $r= validar($_POST['ingresoUsuario'],$_POST['ingresoContrasena']);
 $correo= $r->id_usuario;
+$tiempo = 0;
 
 if($r!=null){
     switch($r->estatus){
         case '0':
             $_SESSION['usuario'] = $correo;
             $_SESSION['nombre'] = $r->nombre;
+            $_SESSION['time'] = $tiempo;
             header("location:../vistas/form.php");
         break;
 
