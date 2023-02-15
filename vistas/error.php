@@ -36,6 +36,7 @@
                             <div class="clip"><div class="shadow"><span class="digit numberOne"></span></div></div>
                         </div>
                         <h2>La página no se encuentra<br/>Page not found</h2>
+                        <a href="../index.php" class="btn btn-primary">Regresar</a>
                     </div>
                 </div>
             </div>

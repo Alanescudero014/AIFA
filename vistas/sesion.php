@@ -4,10 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CREAR SESIÓN</title>
+	<link href='https://fonts.googleapis.com/css?family=Anton|Passion+One|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <style>
+	*
+    {
+      font-family: 'PT Sans Caption', sans-serif, 'arial', 'Times New Roman';
+    }
   main {
     background: #d9d7d5;
     display: flex;
@@ -135,7 +140,7 @@ header{
 		</div>
 	<div style="text-align: center;justify-content: center;">		
 	<br><br>
-		<div style="border: 1px solid #aaaaaa; background-image: url('../img/form.png'); width: 60%; height: 70%;">
+		<div style="border: 1px solid #aaaaaa; background-image: url('../img/sesion.jpg'); width: 60%; height: 70%;">
 				<form method="post" action="alta_usuario.php">
 					<br>
 				<p><b>Nombre Completo:</b></p>
