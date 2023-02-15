@@ -115,8 +115,12 @@ font-size:16px;
 
 body{
 	position: relative;
-	padding-bottom: 8em;
+	padding-bottom: 9em;
 }
+header{
+		background-color: #111F2D;
+		height: 70px;
+	}
 </style>
 <body>
 <header class="navbar sticky-top flex-md-nowrap p-1 text-white m" style="background-color: #002b49">
