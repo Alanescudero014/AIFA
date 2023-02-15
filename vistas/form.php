@@ -137,7 +137,7 @@ font-size:16px;
         var redirect = function(){
                     setTimeout("document.getElementById('formulario').submit()",599000)
         }
-    </script><!-- Está funión envia automaticamente el formulario en caso de 
+    </script><!-- Está función envia automaticamente el formulario en caso de 
     que el usuario no de clic en el botón de enviar -->
 
 
@@ -146,7 +146,7 @@ font-size:16px;
         function ahora(){
                     setTimeout("document.getElementById('formulario').submit()",1000)
         }
-    </script><!-- Está funión envia automaticamente el formulario en caso de 
+    </script><!-- Está función envia automaticamente el formulario en caso de 
     que el usuario no de clic en el botón de enviar -->
 
 <body onload="redirect()">
@@ -183,7 +183,7 @@ setInterval('contadores()',1000);//1000 CADA SEGUNDO SE EJECUTA LA FUNCIÓN
     console.log(acumulado);
 
 </script><!-- Esta función se utiliza para guardar en las varibles el tiempo que 
-lleva el usuario, aun cuando refreque la página -->
+lleva el usuario, aun cuando refresque la página -->
 
 <script> //SCRIPT 2
     function checar(){
