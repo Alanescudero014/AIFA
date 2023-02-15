@@ -229,7 +229,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 				<b><p style="color: black;">El examen se conforma de una sección de opción múltiple con 20 preguntas, constituyendo el 100% de calificación,
 						cuenta con 10 minutos para contestarlo; deberá elegir la respuesta correcta. Tiene prohibido consultar apuntes, libros o cualquier
 					otro artículo o material no específicado para la resolución de su examen.</p>
-				<p style="color: black;">Lea detenidamente las preguntas y eliga la respuesta correcta (valor por cada pregunta 5 puntos).<?php echo $_SESSION['usuario'] ?></b></p>
+				<p style="color: black;">Lea detenidamente las preguntas y eliga la respuesta correcta (valor por cada pregunta 5 puntos).</b></p>
 				<hr>
 				</div>
 		<div style="text-align: left;" class="wrap">
