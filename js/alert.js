@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //===
     var DATE_TARGET = new Date();
     DATE_TARGET.setMinutes(DATE_TARGET.getMinutes() + 10);
+    DATE_TARGET.setSeconds(DATE_TARGET.getSeconds() - acumulado);
     // DOM for render
     const SPAN_MINUTES = document.querySelector('span#minutes');
     const SPAN_SECONDS = document.querySelector('span#seconds');
