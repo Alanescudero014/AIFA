@@ -51,6 +51,7 @@
   input, textarea{
 		border-radius: 10px;
 		border: 0;
+	
 	}
 	p, label{
 		color: white;
@@ -144,7 +145,7 @@ header{
 		</div>
 	<div style="text-align: center;justify-content: center;">		
 	<br><br>
-		<div style="border: 1px solid #aaaaaa; background-image: url('../img/sesion.jpg'); width: 60%; height: 70%;">
+		<div style="border: 1px solid #aaaaaa;  width: 60%; height: 70%; background-color: rgba(0, 0, 0, 0.5) ">
 				<form method="post" action="alta_usuario.php">
 					<br>
 				<p><b>Nombre Completo:</b></p>
@@ -170,6 +171,6 @@ header{
 </body>
 
 <footer>
-	<p id="pie">Copyright © 2023 Aeropuerto Internacional Felipe Ángeles. </p>
+	<p id="pie" style="color: white;">Copyright © 2023 Aeropuerto Internacional Felipe Ángeles. </p>
 </footer>
 </html>

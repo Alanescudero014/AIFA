@@ -87,13 +87,13 @@ session_start();
 	<div id="contenedorPadre" style="text-align: center;">
 		<h1 style="color: #111F2D;">INICIO DE SESIÓN</h1>
 		<hr>
-		<div style="height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/avion.png');">
+		<div style="height: auto; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/avion.png');">
 				<form method="post" action="modelo/entrar.php"><br>
                     <p><b>Correo Electrónico:</b></p>
 					<input type="email" name="ingresoUsuario" placeholder="Email" required><br><br>
 					<p><b>Contraseña:</b></p>
 					<input type="password" name="ingresoContrasena" placeholder="Password" required><br><br>
-					<input type="submit" class="btn btn-light" value="Acceder" style="opacity: 85%;">
+					<input type="submit" class="btn btn-outline-primary" value="Acceder" style=" color: white;">
 					<p></p>
 			</form>
 			<br>
