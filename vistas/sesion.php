@@ -126,8 +126,12 @@ header{
 		background-color: #111F2D;
 		height: 70px;
 	}
+
+#imagen{
+	backdrop-filter: blur(10px);
+}
 </style>
-<body>
+<body id="imagen" style="border: 1px solid #aaaaaa; background-image: url('../img/pista.jpeg'); background-size: cover; background-repeat: no-repeat;">
 <header class="navbar sticky-top flex-md-nowrap p-1 text-white m" style="background-color: #002b49">
     <a class="navbar-brand p-2">
         <img src="../img/logo.svg" height="60rem"></a>
@@ -136,7 +140,7 @@ header{
   </header>
   <hr>
 	<div style="width: 50%; text-align: center; height: auto; ">
-			<h1 style="color: white; background-color: #111F2D; height: 100%; border-radius: 20px;">Registro de usuario a la Evaluación de Ética del<br> Aeropuerto Internacional Felipe Ángeles</h1>
+			<h1 style="color: white; height: 100%; border-radius: 20px;">Registro de usuario a la Evaluación de Ética del<br> Aeropuerto Internacional Felipe Ángeles</h1>
 		</div>
 	<div style="text-align: center;justify-content: center;">		
 	<br><br>
