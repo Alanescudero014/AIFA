@@ -85,7 +85,7 @@
       .formulario .checkbox input[type="checkbox"]:checked + label:before {
         display: none; }
       .formulario .checkbox input[type="checkbox"]:checked + label {
-        background: #6150ff;
+        background: #00a9d3;
         color: #fff;
         padding: 5px 15px; }
   

@@ -21,4 +21,4 @@ $stmt->execute();
      $id_respuesta = null;
     return $respuesta;*/
 //header("refresh:2;url=../index.php");
-header("location:alta_usuario_res.php");
+header("refresh:1;url=alta_usuario_res.php");
