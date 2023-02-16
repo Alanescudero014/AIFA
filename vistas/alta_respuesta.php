@@ -11,6 +11,9 @@ create_respuesta($respuesta);
 
 
 echo "<script>alert('RESPUESTAS GUARDADAS EXITOSAMENTE, GRACIAS.');</script>";
+header("refresh:1;url=alta_usuario_res.php");
+
+
 /*
 $sql = "SELECT id_respuesta FROM respuesta ORDER BY id_respuesta DESC LIMIT 1";
 $stmt = $base_de_datos->prepare($sql);
@@ -21,4 +24,3 @@ $stmt->execute();
      $id_respuesta = null;
     return $respuesta;*/
 //header("refresh:2;url=../index.php");
-header("refresh:1;url=alta_usuario_res.php");
