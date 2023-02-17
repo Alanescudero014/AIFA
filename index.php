@@ -67,9 +67,6 @@ session_start();
 	p{
         color: white;
     }
-	a{
-		
-	}
 	header{
 		background-color: #111F2D;
 		height: 70px;
