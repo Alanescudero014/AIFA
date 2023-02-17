@@ -2,6 +2,8 @@
 
 Class Respuesta{
     private $id_respuesta;
+    private $id_usuario;
+    private $nombre;
     private $res1;
     private $res2;
     private $res3;
@@ -23,11 +25,13 @@ Class Respuesta{
     private $res19;
     private $res20;
 
-public function __construct($id_respuesta, $res1, $res2, $res3, $res4, $res5,
+public function __construct($id_respuesta, $id_usuario, $nombre,$res1, $res2, $res3, $res4, $res5,
                             $res6, $res7, $res8, $res9, $res10, $res11, $res12,
                             $res13, $res14, $res15, $res16, $res17, $res18,
                             $res19, $res20){
                     $this->id_respuesta = $id_respuesta;
+                    $this->id_usuario = $id_usuario;
+                    $this->nombre = $nombre;
                     $this->res1 = $res1;
                     $this->res2 = $res2;
                     $this->res3 = $res3;
@@ -55,6 +59,18 @@ public function getId_respuesta(){
 }
 public function setId_respuesta($id_respuesta){
     $this->id_respuesta = $id_respuesta;
+}
+public function getId_usuario(){
+    return $this->id_usuario;
+}
+public function setId_usuario($id_usuario){
+    $this->id_usuario = $id_usuario;
+}
+public function getNombre(){
+    return $this->nombre;
+}
+public function setNombre($nombre){
+    $this->nombre = $nombre;
 }
 public function getRes1(){
     return $this->res1;

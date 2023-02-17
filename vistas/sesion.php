@@ -49,7 +49,7 @@
     }
   }
   input, textarea{
-		border-radius: 10px;
+		border-radius: 6px;
 		border: 0;
 	
 	}
@@ -121,7 +121,7 @@ font-size:16px;
 
 body{
 	position: relative;
-	padding-bottom: 9em;
+	padding-bottom: 10em;
 }
 header{
 		background-color: #111F2D;
@@ -145,27 +145,29 @@ header{
 		</div>
 	<div style="text-align: center;justify-content: center;">		
 	<br><br>
-		<div style="border: 1px solid #aaaaaa;  width: 60%; height: 70%; background-color: rgba(0, 0, 0, 0.5) ">
+		<div style="border: 1px solid #aaaaaa;  width: 60%; height: 70%; background-color: rgba(0, 0, 0, 0.5);  ">
 				<form method="post" action="alta_usuario.php">
+					<div style="width: 80%;">
 					<br>
-				<p><b>Nombre Completo:</b></p>
-					<input type="text" name="nombre" required>
-					<p><b>No. Empleado:</b></p>
-					<input type="text" name="empleado" required>
-					<p><b>Dirección:</b></p>
-					<input type="text" name="direccion" required>
-					<p><b>Subdirección:</b></p>
-					<input type="text" name="subdireccion" required>
-					<p><b>Gerencia:</b></p>
-					<input type="text" name="gerencia" required >
-					<p><b>Cargo:</b></p>
-					<input type="text" name="cargo" required >
-					<p><b>Correo Electrónico:</b></p>
-					<input type="email" name="correo" required><br><br>
-					<input type="hidden" name="estatus" value="0">
-					<button type="submit" class="btn btn-outline-primary"><label>REGISTRAR</label></button>
-					<p></p>
-			</form>
+					<p><input type="text" name="nombre" placeholder="Nombre Completo" required style="width: 80%;"></p><br>
+						
+						<p><input type="text" name="empleado" placeholder="No. Empleado" required style="width: 80%;"></p><br>
+						
+						<p><input type="text" name="direccion" placeholder="Dirección" required style="width: 80%;"></p><br>
+						
+						<p><input type="text" name="subdireccion" placeholder="Subdirección" required style="width: 80%;"></p><br>
+						
+						<p><input type="text" name="gerencia" placeholder="Gerencia" required style="width: 80%;"></p><br>
+						
+						<p><input type="text" name="cargo" placeholder="Cargo" required style="width: 80%;"></p><br>
+						
+						<p><input type="email" name="correo" placeholder="Correo Electrónico" required style="width: 80%;"></p>
+						<br>
+						<input type="hidden" name="estatus" value="0">
+						
+						<p></p>
+					</div><button type="submit" class="btn btn-outline-primary"><label>REGISTRAR</label></button><p></p>
+				</form>
 		</div>
 	</div>
 </body>

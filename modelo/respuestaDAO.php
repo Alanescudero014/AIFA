@@ -3,11 +3,13 @@
 include_once("respuesta.php");
 function create_respuesta($respuesta){
     include_once("conexion.php");
-    $sql="INSERT INTO respuesta(id_respuesta, res1, res2, res3, res4, res5,".
+    $sql="INSERT INTO respuesta(id_respuesta, id_usuario, nombre, res1, res2, res3, res4, res5,".
     "res6, res7, res8, res9, res10, res11, res12,".
     "res13, res14, res15, res16, res17, res18,".
     "res19, res20)VALUES ('".
         $respuesta->getId_respuesta()."','".
+        $respuesta->getId_usuario()."','".
+        $respuesta->getNombre()."','".
         $respuesta->getRes1()."','".
         $respuesta->getRes2()."','".
         $respuesta->getRes3()."','".

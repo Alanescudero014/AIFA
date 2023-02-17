@@ -135,14 +135,18 @@ font-size:16px;
         alert("Bienvenido, gracias por colaborar con esta evaluación. Tienes 10 minutos para terminar."); //inicia alert
     </script>
     <script src="../js/alert.js">//temporizador</script>
-
+<!--
 <script language="javascript" type="text/javascript">
         var formulario = document.getElementById('formulario'); // el id del formulario
         var redirect = function(){
-                    setTimeout("document.getElementById('formulario').submit()",599000)
+                    setTimeout("document.getElementById('formulario').submit()",599000) // 9:59
         }
-    </script><!-- Está función envia automaticamente el formulario en caso de 
-    que el usuario no de clic en el botón de enviar -->
+    </script> Está función envia automaticamente el formulario en caso de 
+    que el usuario no de clic en el botón de enviar
+
+QUEDA INHABILITADA POR EL TIEMPO DE REFRECAR LA PÁGINA-->
+
+	
 
 
 	<script language="javascript" type="text/javascript">
@@ -153,7 +157,7 @@ font-size:16px;
     </script><!-- Está función envia automaticamente el formulario en caso de 
     que el usuario no de clic en el botón de enviar -->
 
-<body onload="redirect()">
+<body>
 
 <script>
 		function mensaje() {
@@ -168,15 +172,6 @@ setTimeout(mensaje,540000);//540000 (9 minutos)
 
 <script>//SCRIPT 1
     var contador = 0;
-
-	
-
-
-	// replace() usando una expresión Regex para reemplazar espacios en blanco
-
-
-	//console.log($variable);
-	//id = localStorage.$variable;
 
     if (localStorage.usuario<?php echo $_SESSION['usuario'] ?> == null){
         var acumulado = 0;
@@ -213,6 +208,8 @@ lleva el usuario, aun cuando refresque la página -->
 }
 setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 </script><!-- Está función es para preguntar si ya han pasado el tiempo limite del formulario -->
+
+
 <header class="navbar sticky-top flex-md-nowrap p-1 text-white m" style="background-color: #002b49">
     <a class="navbar-brand p-2">
         <img src="../img/logo.svg" height="60rem"></a>
@@ -238,6 +235,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 			<p>
 				<span id="minutes"></span> minutos : <span id="seconds"></span> segundos    
 			</p>
+			<p style="color: red;"> <span id="aviso"></span></p>
 			
 		</section> <input type="text" name="aviso" id="aviso" style=" border: 0; color:red; font-weight: bold; width: 270px;" readonly><br>
 				<form method="post" action="alta_respuesta.php" class="formulario" id="formulario">
@@ -258,6 +256,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c1" name="res1" value="3">
 						<label for="c1">c) Código de ética</label>
+						<input type="radio" id="d1" name="res1" value="0" checked="true">
 						</div>
 					</div>
 					<p>2. Comunicación verbal y escrita que tiene como finalidad visibilizar a las mujeres para equilibrar las asimetrías
@@ -276,6 +275,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c2" name="res2" value="3">
 						<label for="c2">c) Código de conducta</label>
+						<input type="radio" id="d2" name="res2" value="0" checked="true">
 						</div>
 					</div>
 					<p>3. Es una forma de violencia de carácter sexual en la cual hay un ejercicio abusivo de poder por parte de quién la realiza
@@ -294,6 +294,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c3" name="res3" value="3">
 						<label for="c3">c) Acoso laboral</label>
+						<input type="radio" id="d3" name="res3" value="0" checked="true">
 						</div>
 					</div>
 					<p>4. Conjunto de ingresos financieros y materiales de los que disponen las Dependencias y Entidades para el
@@ -311,6 +312,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c4" name="res4" value="3">
 						<label for="c4">c) Programas gubernamentales</label>
+						<input type="radio" id="d4" name="res4" value="0" checked="true">
 						</div>
 					</div>
 					<p>5. De acuerdo al Código de Ética, se entiende como la situación en la cual las mujeres y los hombres acceden con las
@@ -328,6 +330,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c5" name="res5" value="3">
 						<label for="c5">c) Perspectiva de género</label>
+						<input type="radio" id="d5" name="res5" value="0" checked="true">
 						</div>
 					</div>
 					<p>6. Es una forma de violencia que se presenta en una serie de eventos que tienen como objeto intimidar, excluir, 
@@ -346,6 +349,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c6" name="res6" value="3">
 						<label for="c6">c) Hostigamiento laboral</label>
+						<input type="radio" id="d6" name="res6" value="0" checked="true">
 						</div>
 					</div>
 					<p>7. Valor del servicio público, establecido en el Código de Ética, que hace mención que las personas servidoras públicas
@@ -363,6 +367,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c7" name="res7" value="3">
 						<label for="c7">c) Respeto</label>
+						<input type="radio" id="d7" name="res7" value="0" checked="true">
 						</div>
 					</div>
 					<p>8. Es el abuso de cualquier posición de poder público o privado, con el objetivo de generar un beneficio indebido a costa
@@ -380,6 +385,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c8" name="res8" value="3">
 						<label for="c8">c) Cohecho</label>
+						<input type="radio" id="d8" name="res8" value="0" checked="true">
 						</div>
 					</div>
 					<p>9. Las personas servidoras públicas deben distinguirse por actuar con rectitud, sin utlizar su cargo para obtener,
@@ -397,6 +403,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c9" name="res9" value="3">
 						<label for="c9">c) Lealtad</label>
+						<input type="radio" id="d9" name="res9" value="0" checked="true">
 						</div>
 					</div>
 					<p>10. La secretaría, los Comités de Ética y los Órganos Internos de Control, en las dependencias y entidades, conforme al
@@ -414,6 +421,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c10" name="res10" value="3">
 						<label for="c10">c) La aplicación</label>
+						<input type="radio" id="d10" name="res10" value="0" checked="true">
 						</div>
 					</div>
 					<p>11. Son necesarios para asegurar la dignidad inherente a todas las personas:
@@ -430,6 +438,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c11" name="res11" value="3">
 						<label for="c11">c) Derechos sociales</label>
+						<input type="radio" id="d11" name="res11" value="0" checked="true">
 						</div>
 					</div>
 					<p>12. Es el principio en el ejercicio del servicio público que significa la cobertura, sin exclusión ni discriminación
@@ -447,6 +456,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c12" name="res12" value="3">
 						<label for="c12">c) Principio de no <br>discriminación</label>
+						<input type="radio" id="d12" name="res12" value="0" checked="true">
 						</div>
 					</div>
 					<p>13. Son aquellos derechos que forman parte de la base necesaria para que todas las personas puedan subsistir
@@ -464,6 +474,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c13" name="res13" value="3">
 						<label for="c13">c) Progresivos</label>
+						<input type="radio" id="d13" name="res13" value="0" checked="true">
 						</div>
 					</div>
 					<p>14. Obliga a las y los servidores públicos a que los derechos humanos sean respetados y grantizados sin
@@ -482,6 +493,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c14" name="res14" value="3">
 						<label for="c14">c) El derecho a la igualdad</label>
+						<input type="radio" id="d14" name="res14" value="0" checked="true">
 						</div>
 					</div>
 					<p>15. ¿Qué significa que los derechos humanos sean inalienables?.
@@ -498,6 +510,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c15" name="res15" value="3">
 						<label for="c15">c) Que no pueden cancelarse <br>o quitársele a las personas</label>
+						<input type="radio" id="d15" name="res15" value="0" checked="true">
 						</div>
 					</div>
 					<p>16. La familia de Carolina, joven a quién le fue negado su derecho a estudiar, por identificarse como persona
@@ -517,6 +530,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c16" name="res16" value="3">
 						<label for="c16">c) Deber de investigar</label>
+						<input type="radio" id="d16" name="res16" value="0" checked="true">
 						</div>
 					</div>
 					<p>17. Deben prevenir, investigar y sancionar toda la violación de derechos reconocidos por la Convención Americana,
@@ -535,6 +549,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c17" name="res17" value="3">
 						<label for="c17">c) Los ciudadanos</label>
+						<input type="radio" id="d17" name="res17" value="0" checked="true">
 						</div>
 					</div>
 					<p>18. Es una herramienta jurídica que permite defenderse a todas las personas dentro del territorio nacional
@@ -552,6 +567,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c18" name="res18" value="3">
 						<label for="c18">c) Mecanismos de protección jurisdiccional</label>
+						<input type="radio" id="d18" name="res18" value="0" checked="true">
 						</div>
 					</div>
 					<p>19. El deber constitucional de promover, respetar, proteger y garantizar los derechos humanos le corresponde a:
@@ -568,6 +584,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c19" name="res19" value="3">
 						<label for="c19">c) Los ciudadanos</label>
+						<input type="radio" id="d19" name="res19" value="0" checked="true">
 						</div>
 					</div>
 					<p>20. ¿Cuáles son los principios de los derechos humanos establecidos en la Constitución?.
@@ -584,6 +601,7 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
 						<div class="contenido">
 						<input type="radio" id="c20" name="res20" value="3">
 						<label for="c20">c) Organización social económica,<br>  política y cultural</label>
+						<input type="radio" id="d20" name="res20" value="0" checked="true">
 						</div>
 					</div>
 					</div>
