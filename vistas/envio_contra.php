@@ -1,6 +1,4 @@
 <?php
-include_once("../modelo/usuarioDAO.php");
-include '../modelo/conexionP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -10,49 +8,33 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
-
-$logitud = 8;
-$psswd = substr( md5(microtime()), 1, $logitud);
-
-if (isset($_POST["nombre"])) {
+    function validar($u){
+        include_once("../modelo/conexion.php");
+        $sql = "select * from usuario where correo = ?";
+        $stmt = $base_de_datos->prepare($sql); 
+        $stmt->bindParam(1,$u);
+        $stmt->execute();
+        if($stmt->rowCount()>0)
+            $usuario = $stmt->fetch(PDO::FETCH_OBJ);
+        else
+         $usuario = null;
+        return $usuario;
     
-    if (
-        preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nombre"]) &&
-        preg_match('/^[0-9 ]+$/', $_POST["empleado"]) &&
-        preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["direccion"]) &&
-        preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["subdireccion"]) &&
-        preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["gerencia"]) &&
-        preg_match('/^[a-zA-ZñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["cargo"])
-    ) {
-        $correo = $_POST['correo'];
-        $nombre = $_POST['nombre'];
+    }//funcion validar
+    $correo = $_POST['ingresoUsuario'];
+    
+    $r= validar($_POST['ingresoUsuario']);
+    $correo= $r->id_usuario;
+    $nom= $r->nombre;
+    $password= $r->contrasena;
 
+    if($r!=null){
 
-
-        $usuario = new Usuario("",$_POST["nombre"],$_POST["empleado"],$_POST["direccion"],$_POST["subdireccion"],$_POST["gerencia"],$_POST["cargo"],$_POST["correo"],$psswd,$_POST["estatus"]);
-
-        $verificar_correo = mysqli_query($conexion, "SELECT * FROM usuario WHERE correo = '$correo'");
-
-        if(mysqli_num_rows($verificar_correo) > 0){
-            echo '
-                <script>
-                    alert("Este correo ya esta registrado, intenta con otro diferente");
-                    window.location = "sesion.php";
-                </script>
-            ';
-            exit();
-        }else{
-
-        create_usuario($usuario);
-
-        
-
-        //Create a new PHPMailer instance
         $mail = new PHPMailer;
         $url="http://localhost/AIFA/index.php";	
-        $correo=$_POST["correo"];
-        $pass=$psswd;
-        $nombre=$_POST["nombre"];
+        $correo=$_POST['ingresoUsuario'];
+        $pass=$password;
+        $nombre=$nom;
         $body = "Hola $nombre, gracias por colaborar con está evaluación, la contraseña para ingresar es: $pass. <br>Ingresa la siguiente url para comenzar la evaluación: $url";
 
         $body= str_replace("#URL#", $url, $body);
@@ -83,9 +65,4 @@ if (isset($_POST["nombre"])) {
                 header("refresh:1;url=../index.php");
                 }
 
-}
-    }else{
-        echo "<script>alert('Error, vuelve a intentarlo')</script>;";
-        header("refresh:1;url=../index.php");
     }
-}

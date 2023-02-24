@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CREAR SESIÓN</title>
+	<title>Recuperar Contraseña</title>
 	<link href='https://fonts.googleapis.com/css?family=Anton|Passion+One|PT+Sans+Caption' rel='stylesheet' type='text/css'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
@@ -121,7 +121,7 @@ font-size:16px;
 
 body{
 	position: relative;
-	padding-bottom: 10em;
+	padding-bottom: 33em;
 }
 header{
 		background-color: #111F2D;
@@ -138,36 +138,23 @@ header{
         <img src="../img/logo.svg" height="60rem"></a>
     <div class="navbar-nav">
     </div>
-	<a style="color: white;" class="btn btn-outline-primary" href="cerrar_sesion.php">ATRÁS</a>
+    <a style="color: white;" class="btn btn-outline-primary" href="cerrar_sesion.php">ATRÁS</a>
   </header>
   <hr>
 	<div style="width: 50%; text-align: center; height: auto; ">
-			<h1 style="color: white; height: 100%; border-radius: 20px;">Registro de usuario a la Evaluación de Ética del<br> Aeropuerto Internacional Felipe Ángeles</h1>
+			<h1 style="color: white; height: 100%; border-radius: 20px;">Recuperar Contraseña</h1>
 		</div>
 	<div style="text-align: center;justify-content: center;">		
 	<br><br>
 		<div style="border: 1px solid #aaaaaa;  width: 60%; height: 70%; background-color: rgba(0, 0, 0, 0.5);  ">
-				<form method="post" action="alta_usuario.php">
+				<form method="post" action="envio_contra.php">
 					<div style="width: 80%;">
 					<br>
-					<p><input type="text" name="nombre" placeholder="Nombre Completo" required style="width: 80%;"></p><br>
-						
-						<p><input type="text" name="empleado" placeholder="No. Empleado" required style="width: 80%;"></p><br>
-						
-						<p><input type="text" name="direccion" placeholder="Dirección" required style="width: 80%;"></p><br>
-						
-						<p><input type="text" name="subdireccion" placeholder="Subdirección" required style="width: 80%;"></p><br>
-						
-						<p><input type="text" name="gerencia" placeholder="Gerencia" required style="width: 80%;"></p><br>
-						
-						<p><input type="text" name="cargo" placeholder="Cargo" required style="width: 80%;"></p><br>
-						
-						<p><input type="email" name="correo" placeholder="Correo Electrónico" required style="width: 80%;"></p>
-						<br>
-						<input type="hidden" name="estatus" value="0">
+                    <label for="">Ingresa tu correo electrónico para enviar tu contraseña por email:</label><br><br>
+					<p><input type="text" name="ingresoUsuario" placeholder="Correo Electrónico" required style="width: 80%;"></p><br>
 						
 						<p></p>
-					</div><button type="submit" class="btn btn-outline-primary"><label>REGISTRAR</label></button><p></p>
+					</div><button type="submit" class="btn btn-outline-primary"><label>ENVIAR</label></button><p></p>
 				</form>
 		</div>
 	</div>

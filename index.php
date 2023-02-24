@@ -97,7 +97,7 @@ session_start();
 				</div>
 				<hr>
 		<div>
-			<a href="#" class="btn btn-outline-dark">Olvide contraseña</a>
+			<a href="vistas/recuperarc.php" class="btn btn-outline-dark">Olvide contraseña</a>
 				<a href="vistas/sesion.php" class="btn btn-outline-dark">No tengo cuenta</a>
 		
 		</div>

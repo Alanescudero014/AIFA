@@ -214,8 +214,8 @@ setInterval('checar()',1000);// CADA SEGUNDO SE EJECUTA LA FUNCIÓN
     <a class="navbar-brand p-2">
         <img src="../img/logo.svg" height="60rem"></a>
     <div class="navbar-nav">
-		<a style="color: white" href="cerrar_sesion.php">SALIR</a>
     </div>
+	<a style="color: white;" class="btn btn-outline-primary" href="cerrar_sesion.php">SALIR</a>
   </header>
 	<hr>
 	<div style="text-align: center;">
